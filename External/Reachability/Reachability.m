@@ -478,6 +478,11 @@ const SCNetworkReachabilityFlags kConnectionDown =  kSCNetworkReachabilityFlagsC
 } // networkStatusForFlags:
 
 
+- (NetworkStatus) flurryCurrentReachabilityStatus {
+    return [self currentReachabilityStatus];
+}
+
+
 - (NetworkStatus) currentReachabilityStatus {
 	
 	NSAssert(reachabilityRef, @"currentReachabilityStatus called with NULL reachabilityRef");
